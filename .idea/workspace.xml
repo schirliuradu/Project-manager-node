@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="feat: unit test project service + code linting">
+    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Project.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enums/status-enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/status-enum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/controllers/project-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/controllers/project-controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/middlewares/validation-middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middlewares/validation-middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/resources/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/resources/project.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/http/routes/project-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/routes/project-router.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/project-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/project-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/db/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/database.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +111,7 @@
       <workItem from="1704916798434" duration="4165000" />
       <workItem from="1704920981023" duration="486000" />
       <workItem from="1704921972607" duration="12606000" />
-      <workItem from="1705010400288" duration="4892000" />
+      <workItem from="1705010400288" duration="4976000" />
     </task>
     <task id="LOCAL-00001" summary="feat: scaffolding and base crud operations on project">
       <created>1705012130422</created>
@@ -138,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705012316302</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: unit test project service + code linting">
+      <created>1705015307813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705015307813</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
