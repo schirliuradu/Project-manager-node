@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="" />
+    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dto/requests/create-project-request-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,8 +58,16 @@
       <workItem from="1704916798434" duration="4165000" />
       <workItem from="1704920981023" duration="486000" />
       <workItem from="1704921972607" duration="12606000" />
-      <workItem from="1705010400288" duration="1629000" />
+      <workItem from="1705010400288" duration="1892000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: scaffolding and base crud operations on project">
+      <created>1705012130422</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705012130422</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,5 +77,9 @@
         <option value="typeorm" />
       </set>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: scaffolding and base crud operations on project" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: scaffolding and base crud operations on project" />
   </component>
 </project>
