@@ -1,33 +1,38 @@
-import { Request } from 'express';
-import {IsEnum, IsNotEmpty, IsString, MaxLength} from "class-validator";
-import {StatusEnum} from "../../enums/status-enum";
+import { Request } from 'express'
+import { StatusEnum } from '../../enums/status-enum'
+import { RequestDtoInterface } from './interfaces/request-dto-interface'
+import { IsEnum, IsNotEmpty, IsString, MaxLength } from 'class-validator'
 
-export interface RequestDto {}
+type CreateProjectRequest = Request & {
+  body: {
+    title: string
+    description: string
+    status: string
+  }
+}
 
-type CreateProjectRequest = Request & { body: { title: string; description: string; status: string } };
+export class CreateProjectRequestDto implements RequestDtoInterface {
+  @IsNotEmpty()
+  @IsString()
+  @MaxLength(50)
+  title: string
 
-export class CreateProjectRequestDto {
-    @IsNotEmpty()
-    @IsString()
-    @MaxLength(50)
-    title: string;
+  @IsNotEmpty()
+  @IsString()
+  description: string
 
-    @IsNotEmpty()
-    @IsString()
-    description: string;
+  @IsNotEmpty()
+  @IsString()
+  @IsEnum(StatusEnum)
+  status: string
 
-    @IsNotEmpty()
-    @IsString()
-    @IsEnum(StatusEnum)
-    status: string;
+  constructor(request: CreateProjectRequest) {
+    this.title = request.body.title
+    this.description = request.body.description
+    this.status = request.body.status
+  }
 
-    constructor(request: CreateProjectRequest) {
-        this.title = request.body.title;
-        this.description = request.body.description;
-        this.status = request.body.status;
-    }
-
-    public static fromRequest(req: CreateProjectRequest): CreateProjectRequestDto {
-        return new CreateProjectRequestDto(req);
-    }
+  public static fromRequest(req: CreateProjectRequest): CreateProjectRequestDto {
+    return new CreateProjectRequestDto(req)
+  }
 }

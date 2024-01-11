@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dto/requests/create-project-request-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" afterDir="false" />
+    <list default="true" id="68ce2df9-648a-4fc8-a2f3-8c09a45b7e08" name="Changes" comment="feat: unit test project service + code linting">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enums/status-enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/enums/status-enum.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/controllers/project-controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/controllers/project-controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/middlewares/validation-middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/middlewares/validation-middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/requests/create-project-request-dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/resources/project.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/resources/project.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/http/routes/project-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/http/routes/project-router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/project-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/project-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/db/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/db/database.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,30 +33,83 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/radu/Desktop/projects/iqvia/project-manager-node&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/radu/Desktop/projects/iqvia/project-manager-node/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/radu/Desktop/projects/iqvia/project-manager-node",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/radu/Desktop/projects/iqvia/project-manager-node/node_modules/jest",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/radu/Desktop/projects/iqvia/project-manager-node/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
+    "ts.external.directory.path": "/Users/radu/Desktop/projects/iqvia/project-manager-node/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/unit" />
       <recent name="$PROJECT_DIR$/src/http" />
     </key>
+  </component>
+  <component name="RunManager" selected="Jest.ProjectService (1)">
+    <configuration name="ProjectService (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.ts" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/services/project-service.test.ts" />
+      <test-names>
+        <test-name value="ProjectService" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectService" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/jest.config.ts" />
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectService.should return all projects" type="JavaScriptTestRunnerJest" temporary="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/services/project-service.test.ts" />
+      <test-names>
+        <test-name value="ProjectService" />
+        <test-name value="should return all projects" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.ProjectService (1)" />
+        <item itemvalue="Jest.ProjectService" />
+        <item itemvalue="Jest.ProjectService.should return all projects" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -58,7 +122,7 @@
       <workItem from="1704916798434" duration="4165000" />
       <workItem from="1704920981023" duration="486000" />
       <workItem from="1704921972607" duration="12606000" />
-      <workItem from="1705010400288" duration="1892000" />
+      <workItem from="1705010400288" duration="4892000" />
     </task>
     <task id="LOCAL-00001" summary="feat: scaffolding and base crud operations on project">
       <created>1705012130422</created>
@@ -67,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705012130422</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: .idea in gitignore and requests folder move inside http folder">
+      <created>1705012316302</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705012316302</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,6 +151,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: scaffolding and base crud operations on project" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: scaffolding and base crud operations on project" />
+    <MESSAGE value="feat: .idea in gitignore and requests folder move inside http folder" />
+    <MESSAGE value="feat: unit test project service + code linting" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: unit test project service + code linting" />
   </component>
 </project>
