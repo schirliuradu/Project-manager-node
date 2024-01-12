@@ -1,7 +1,7 @@
 PORT=3000
 
 # Environment
-APP_ENV=local
+NODE_ENV=local
 
 # Database
 DB_DATABASE=database

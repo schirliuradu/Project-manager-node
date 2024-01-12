@@ -8,9 +8,8 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm'
-import { StatusEnum } from '../enums/status-enum'
 
-@Entity()
+@Entity('projects')
 export class Project {
   @PrimaryGeneratedColumn()
   id: number
@@ -24,20 +23,16 @@ export class Project {
   @Column()
   description: string
 
-  @Column({
-    type: 'enum',
-    enum: StatusEnum,
-    default: StatusEnum.OPEN,
-  })
-  status: StatusEnum
+  @Column()
+  status: string
 
-  @CreateDateColumn({ type: 'timestamp' })
+  @CreateDateColumn({ type: 'datetime' })
   created_at: Date
 
-  @UpdateDateColumn({ type: 'timestamp' })
+  @UpdateDateColumn({ type: 'datetime' })
   updated_at: Date
 
-  @DeleteDateColumn({ type: 'timestamp', nullable: true })
+  @DeleteDateColumn({ type: 'datetime', nullable: true })
   deleted_at: Date
 
   @BeforeInsert()
