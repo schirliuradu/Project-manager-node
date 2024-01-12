@@ -24,14 +24,3 @@ const databaseConfig =
       }
 
 export const Db = new DataSource(databaseConfig as DataSourceOptions)
-
-if (process.env.NODE_ENV === 'local') {
-  Db.initialize()
-    .then(() => {
-      console.log('Database connection established')
-    })
-    .catch((error) => {
-      console.error('Error connecting to database:', error)
-      process.exit(1)
-    })
-}
