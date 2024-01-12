@@ -2,14 +2,17 @@ import dotenv from 'dotenv'
 dotenv.config() // setup env vars
 
 import bodyParser from 'body-parser'
-import projectRoutes from './http/routes/project-router'
-import express, { Application } from 'express'
 import { Db } from './utils/db/database'
+import express, { Application } from 'express'
+import authRouter from './http/routes/auth-router'
+import projectRouter from './http/routes/project-router'
 
 export const app: Application = express()
 
 app.use(bodyParser.json())
-app.use('/api/projects', projectRoutes)
+
+app.use('/api', authRouter)
+app.use('/api/projects', projectRouter)
 
 const port = process.env.PORT || 3000
 

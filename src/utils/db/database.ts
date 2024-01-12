@@ -1,5 +1,6 @@
 import { Project } from '../../entities/Project'
 import { DataSource, DataSourceOptions } from 'typeorm'
+import { User } from '../../entities/User'
 
 const databaseConfig =
   process.env.NODE_ENV === 'test'
@@ -7,7 +8,7 @@ const databaseConfig =
         type: 'sqlite' as 'sqlite',
         database: ':memory:',
         dropSchema: true,
-        entities: [Project],
+        entities: [Project, User],
         synchronize: true,
         logging: false,
       }
@@ -20,7 +21,7 @@ const databaseConfig =
         database: process.env.DB_DATABASE,
         synchronize: process.env.NODE_ENV === 'local',
         logging: false,
-        entities: [Project],
+        entities: [Project, User],
       }
 
 export const Db = new DataSource(databaseConfig as DataSourceOptions)

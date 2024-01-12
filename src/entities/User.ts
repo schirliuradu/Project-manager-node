@@ -1,30 +1,32 @@
 import {
   BeforeInsert,
-  BeforeUpdate,
   Column,
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  Unique,
   UpdateDateColumn,
 } from 'typeorm'
+import * as bcrypt from 'bcrypt'
 
-@Entity('projects')
-export class Project {
+@Entity('users')
+export class User {
   @PrimaryGeneratedColumn()
   id: number
 
   @Column()
-  slug: string
+  firstName: string
 
   @Column()
-  title: string
+  lastName: string
 
   @Column()
-  description: string
+  @Unique(['email'])
+  email: string
 
   @Column()
-  status: string
+  password: string
 
   @CreateDateColumn()
   created_at: Date
@@ -36,11 +38,8 @@ export class Project {
   deleted_at: Date
 
   @BeforeInsert()
-  @BeforeUpdate()
-  generateSlug() {
-    this.slug = this.title
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[^a-z0-9-]/g, '')
+  async hashPassword() {
+    const salt = await bcrypt.genSalt()
+    this.password = await bcrypt.hash(this.password, salt)
   }
 }
