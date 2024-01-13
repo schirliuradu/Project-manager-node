@@ -7,6 +7,10 @@ import { UserCreated } from '../events/UserCreated'
 export class UserService {
   constructor(private readonly repository: Repository<User>) {}
 
+  async findByEmail(email: string) {
+    return this.repository.findOneBy({ email })
+  }
+
   async createUser(dto: RegisterRequestDto) {
     const user = new User()
 

@@ -3,7 +3,7 @@ import { StatusEnum } from '../../enums/status-enum'
 import { RequestDtoInterface } from './interfaces/request-dto-interface'
 import { IsEnum, IsNotEmpty, IsString, MaxLength } from 'class-validator'
 
-type CreateProjectRequest = Request & {
+export type CreateProjectRequest = Request & {
   body: {
     title: string
     description: string

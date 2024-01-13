@@ -2,7 +2,7 @@ import { Request } from 'express'
 import { RequestDtoInterface } from './interfaces/request-dto-interface'
 import { IsEmail, IsNotEmpty, IsString, IsStrongPassword, MaxLength } from 'class-validator'
 
-type RegisterRequest = Request & {
+export type RegisterRequest = Request & {
   body: {
     firstName: string
     lastName: string
