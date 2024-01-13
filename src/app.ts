@@ -4,7 +4,7 @@ dotenv.config() // setup env vars
 import bodyParser from 'body-parser'
 import { Db } from './utils/db/database'
 import express, { Application } from 'express'
-import { producer } from './utils/kafka/instance'
+import { producer } from './utils/kafka/broker/kafka-instance'
 import authRouter from './http/routes/auth-router'
 import projectRouter from './http/routes/project-router'
 

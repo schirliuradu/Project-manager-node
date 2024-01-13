@@ -1,6 +1,6 @@
 import { UserCreated } from '../events/user-created'
-import { KafkaProducer } from '../utils/kafka/producer'
 import { Listenable } from './interfaces/listenable'
+import { KafkaProducer } from '../utils/kafka/broker/kafka-producer'
 
 export class UserCreatedListener implements Listenable {
   constructor(private readonly producer: KafkaProducer) {}

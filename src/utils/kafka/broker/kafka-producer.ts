@@ -1,7 +1,11 @@
 import { Producer } from 'kafkajs'
+import { Registry } from '../schema-registry/registry'
 
 export class KafkaProducer {
-  constructor(private readonly producer: Producer) {
+  constructor(
+    private readonly producer: Producer,
+    private readonly registry: Registry,
+  ) {
     this.producer = producer
   }
 
@@ -10,7 +14,7 @@ export class KafkaProducer {
       topic,
       messages: [
         {
-          value: JSON.stringify(message),
+          value: await this.registry.encode(topic, message),
         },
       ],
     })
