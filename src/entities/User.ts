@@ -1,14 +1,12 @@
 import {
-  BeforeInsert,
+  Entity,
   Column,
+  Unique,
   CreateDateColumn,
   DeleteDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
-  Unique,
   UpdateDateColumn,
+  PrimaryGeneratedColumn,
 } from 'typeorm'
-import * as bcrypt from 'bcrypt'
 
 @Entity('users')
 export class User {
@@ -16,17 +14,11 @@ export class User {
   id: number
 
   @Column()
-  firstName: string
-
-  @Column()
-  lastName: string
-
-  @Column()
   @Unique(['email'])
   email: string
 
   @Column()
-  password: string
+  original_id: number
 
   @CreateDateColumn()
   created_at: Date
@@ -36,10 +28,4 @@ export class User {
 
   @DeleteDateColumn({ nullable: true })
   deleted_at: Date
-
-  @BeforeInsert()
-  async hashPassword() {
-    const salt = await bcrypt.genSalt()
-    this.password = await bcrypt.hash(this.password, salt)
-  }
 }

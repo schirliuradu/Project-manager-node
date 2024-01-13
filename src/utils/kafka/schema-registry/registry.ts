@@ -3,7 +3,7 @@ import { SchemaRegistry } from '@kafkajs/confluent-schema-registry'
 export class Registry {
   constructor(private readonly registry: SchemaRegistry) {}
 
-  async getSchema(topic: string) {
+  private async getSchema(topic: string) {
     return this.registry.getLatestSchemaId(`${topic}-value`)
   }
 
