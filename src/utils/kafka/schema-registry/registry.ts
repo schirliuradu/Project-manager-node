@@ -1,4 +1,5 @@
 import { SchemaRegistry } from '@kafkajs/confluent-schema-registry'
+import { KafkaMessage } from 'kafkajs'
 
 export class Registry {
   constructor(private readonly registry: SchemaRegistry) {}
@@ -11,5 +12,9 @@ export class Registry {
     const schema = await this.getSchema(topic)
 
     return this.registry.encode(schema, payload)
+  }
+
+  async decode(payload: KafkaMessage): Promise<any> {
+    return this.registry.decode(payload.value!)
   }
 }

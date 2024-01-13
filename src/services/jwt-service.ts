@@ -32,7 +32,7 @@ export class JwtService {
       const decodedJwt = decoded as UserJwtPayload
 
       if (decodedJwt.userId) {
-        const user = await this.userRepository.findOneBy({ id: decodedJwt.userId })
+        const user = await this.userRepository.findOneBy({ original_id: decodedJwt.userId })
 
         if (!user) {
           throw new JsonWebTokenError('Jwt token invalid user provided!')

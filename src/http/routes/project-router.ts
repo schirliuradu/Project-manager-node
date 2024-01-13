@@ -1,5 +1,5 @@
 import express from 'express'
-import { Db } from '../../utils/db/database'
+import { Db } from '../../config/db/database'
 import { Project } from '../../entities/Project'
 import { ProjectService } from '../../services/project-service'
 import { ProjectController } from '../controllers/project-controller'
