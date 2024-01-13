@@ -1,8 +1,6 @@
-import jwt, { JsonWebTokenError, JwtPayload } from 'jsonwebtoken'
-import { User } from '../entities/User'
 import { Repository } from 'typeorm'
-
-const { JWT_SECRET, JWT_EXPIRE_TIME } = process.env
+import { User } from '../entities/User'
+import jwt, { JsonWebTokenError, JwtPayload } from 'jsonwebtoken'
 
 interface UserJwtPayload extends JwtPayload {
   userId: number
@@ -10,18 +8,6 @@ interface UserJwtPayload extends JwtPayload {
 
 export class JwtService {
   constructor(private readonly userRepository: Repository<User>) {}
-
-  async generateToken(user: User) {
-    return jwt.sign(
-      {
-        userId: user.id,
-      },
-      JWT_SECRET!,
-      {
-        expiresIn: JWT_EXPIRE_TIME,
-      },
-    )
-  }
 
   async verifyToken(token: string) {
     return jwt.verify(token, process.env.JWT_SECRET!, {}, async (err, decoded) => {

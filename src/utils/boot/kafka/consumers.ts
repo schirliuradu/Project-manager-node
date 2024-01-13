@@ -8,7 +8,7 @@ export const bootKafkaConsumers = async () => {
     await consumer.subscribe({ topic })
 
     await consumer.run({
-      autoCommitInterval: 1000,
+      autoCommitInterval: 500,
       eachMessage: async ({ message }) => {
         await handler.handle(message)
       },

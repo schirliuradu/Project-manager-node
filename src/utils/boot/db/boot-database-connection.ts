@@ -1,5 +1,5 @@
 import { Db } from '../../../config/db/database'
 
-export const databaseConnection = async () => {
+export const bootDatabaseConnection = async () => {
   await Db.initialize()
 }
