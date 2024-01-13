@@ -1,4 +1,4 @@
-import { UserCreated } from '../events/UserCreated'
+import { UserCreated } from '../events/user-created'
 import { KafkaProducer } from '../utils/kafka/producer'
 import { Listenable } from './interfaces/listenable'
 

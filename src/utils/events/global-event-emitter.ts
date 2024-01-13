@@ -1,8 +1,8 @@
 import EventEmitter from 'events'
 import { producer } from '../kafka/instance'
 import { KafkaProducer } from '../kafka/producer'
-import { UserCreated } from '../../events/UserCreated'
-import { UserCreatedListener } from '../../listeners/UserCreatedListener'
+import { UserCreated } from '../../events/user-created'
+import { UserCreatedListener } from '../../listeners/user-created-listener'
 
 const emitter = new EventEmitter()
 
