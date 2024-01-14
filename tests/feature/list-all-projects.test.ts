@@ -1,6 +1,6 @@
 const request = require('supertest')
 const { app } = require('./../../src/app')
-import { Db } from '../../src/utils/db/database'
+import { Db } from '../../src/config/db/database'
 import { Project } from '../../src/entities/Project'
 
 beforeAll(async () => {
