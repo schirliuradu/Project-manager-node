@@ -9,7 +9,8 @@ This is part of the Project manager node microservice cluster, responsible only 
 - [x] Project data retrieval
 - [x] Project data update
 - [x] Project data deletion
-- [x] Feature and unit tests
+- [x] Unit tests
+- [ ] Feature tests (to be finished) 
 
 - [x] Jwt token validation
 - [x] Kafka subscriber to replicate newly created users through auth manager microservice
@@ -22,7 +23,9 @@ This is part of the Project manager node microservice cluster, responsible only 
 - [ ] Tasks assignment to users
 - [ ] Production environment setup
 - [ ] Better Docker containerization
+- [ ] Swagger for API documentation
 - [ ] Mono repository setup
+- [ ] Monorepo packaging to extract common jwt logic to a separate package
 - [ ] CI/CD pipeline setup
 - [ ] Better logging
 
