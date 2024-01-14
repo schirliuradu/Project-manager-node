@@ -23,6 +23,7 @@ This is part of the Project manager node microservice cluster, responsible only 
 - [ ] Tasks assignment to users
 - [ ] Production environment setup
 - [ ] Better Docker containerization
+- [ ] DI container (TypeDI or others)
 - [ ] Swagger for API documentation
 - [ ] Mono repository setup
 - [ ] Monorepo packaging to extract common jwt logic to a separate package
