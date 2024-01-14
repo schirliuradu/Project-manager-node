@@ -9,6 +9,18 @@ interface UserJwtPayload extends JwtPayload {
 export class JwtService {
   constructor(private readonly userRepository: Repository<User>) {}
 
+  async generateToken(user: User) {
+    return jwt.sign(
+      {
+        userId: user.id,
+      },
+      process.env.JWT_SECRET!,
+      {
+        expiresIn: process.env.JWT_EXPIRE_TIME!,
+      },
+    )
+  }
+
   async verifyToken(token: string) {
     return jwt.verify(token, process.env.JWT_SECRET!, {}, async (err, decoded) => {
       if (err) {

@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config() // setup env vars
+
 import bodyParser from 'body-parser'
 import express, { Application } from 'express'
 import projectRouter from './http/routes/project-router'
