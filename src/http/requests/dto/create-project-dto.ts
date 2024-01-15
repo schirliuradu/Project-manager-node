@@ -1,17 +1,9 @@
-import { Request } from 'express'
-import { StatusEnum } from '../../enums/status-enum'
 import { RequestDtoInterface } from './interfaces/request-dto-interface'
 import { IsEnum, IsNotEmpty, IsString, MaxLength } from 'class-validator'
+import { StatusEnum } from '../../../enums/status-enum'
+import { CreateProjectRequest } from '../create-project-request'
 
-export type CreateProjectRequest = Request & {
-  body: {
-    title: string
-    description: string
-    status: string
-  }
-}
-
-export class CreateProjectRequestDto implements RequestDtoInterface {
+export class CreateProjectDto implements RequestDtoInterface {
   @IsNotEmpty()
   @IsString()
   @MaxLength(50)
@@ -32,7 +24,7 @@ export class CreateProjectRequestDto implements RequestDtoInterface {
     this.status = request.body.status
   }
 
-  public static fromRequest(req: CreateProjectRequest): CreateProjectRequestDto {
-    return new CreateProjectRequestDto(req)
+  public static fromRequest(req: CreateProjectRequest): CreateProjectDto {
+    return new CreateProjectDto(req)
   }
 }

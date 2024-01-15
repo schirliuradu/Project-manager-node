@@ -1,6 +1,6 @@
 import { Repository } from 'typeorm'
 import { Project } from '../entities/Project'
-import { CreateProjectRequestDto } from '../http/requests/create-project-request-dto'
+import { CreateProjectDto } from '../http/requests/dto/create-project-dto'
 
 export class ProjectService {
   constructor(private readonly projectRepository: Repository<Project>) {}
@@ -17,7 +17,7 @@ export class ProjectService {
     return this.projectRepository.findOneBy({ id: id })
   }
 
-  async createProject(data: CreateProjectRequestDto) {
+  async createProject(data: CreateProjectDto) {
     const project = new Project()
 
     Object.assign(project, data)

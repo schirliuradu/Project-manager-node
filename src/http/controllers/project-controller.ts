@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import { ProjectResource } from '../resources/project'
 import { ProjectService } from '../../services/project-service'
-import { CreateProjectRequestDto } from '../requests/create-project-request-dto'
+import { CreateProjectDto } from '../requests/dto/create-project-dto'
 
 export class ProjectController {
   constructor(private readonly projectService: ProjectService) {}
@@ -49,7 +49,7 @@ export class ProjectController {
   }
 
   async createProject(req: Request, res: Response) {
-    const requestDto = CreateProjectRequestDto.fromRequest(req)
+    const requestDto = CreateProjectDto.fromRequest(req)
 
     try {
       const project = await this.projectService.createProject(requestDto)

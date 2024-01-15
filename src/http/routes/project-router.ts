@@ -2,9 +2,9 @@ import express from 'express'
 import { Db } from '../../config/db/database'
 import { Project } from '../../entities/Project'
 import { ProjectService } from '../../services/project-service'
+import { CreateProjectDto } from '../requests/dto/create-project-dto'
 import { ProjectController } from '../controllers/project-controller'
 import { validateRequest } from '../middlewares/validation-middleware'
-import { CreateProjectRequestDto } from '../requests/create-project-request-dto'
 import { jwtAuthMiddleware } from '../middlewares/jwt-auth-middleware'
 
 const router = express.Router()
@@ -26,7 +26,7 @@ router.get(
 router.post(
   '/',
   (req, res, next) => jwtAuthMiddleware(req, res, next),
-  (req, res, next) => validateRequest(CreateProjectRequestDto, req, res, next),
+  (req, res, next) => validateRequest(CreateProjectDto, req, res, next),
   projectController.createProject.bind(projectController),
 )
 
