@@ -1,8 +1,8 @@
 import app from '../../src/app'
 const request = require('supertest')
 import { Db } from '../../src/config/db/database'
-import { JwtService } from '../../src/services/jwt-service'
 import { Project } from '../../src/entities/Project'
+import { JwtService } from '../../src/services/jwt-service'
 
 describe('GET /api/projects', () => {
   beforeAll(async () => {

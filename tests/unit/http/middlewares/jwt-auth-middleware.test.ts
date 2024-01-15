@@ -1,7 +1,7 @@
+import { User } from '../../../../src/entities/User'
+import { Db } from '../../../../src/config/db/database'
 import { Request, Response, NextFunction } from 'express'
 import { JwtService } from '../../../../src/services/jwt-service'
-import { Db } from '../../../../src/config/db/database'
-import { User } from '../../../../src/entities/User'
 import { jwtAuthMiddleware } from '../../../../src/http/middlewares/jwt-auth-middleware'
 
 jest.mock('../../../../src/services/jwt-service')

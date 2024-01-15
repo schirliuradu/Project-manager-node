@@ -1,7 +1,7 @@
+import jwt from 'jsonwebtoken'
 import { describe } from 'node:test'
 import { User } from '../../../src/entities/User'
 import { JwtService } from '../../../src/services/jwt-service'
-import jwt from 'jsonwebtoken'
 
 describe('JwtService', () => {
   afterEach(() => {
