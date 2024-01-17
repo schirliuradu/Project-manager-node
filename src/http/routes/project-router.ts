@@ -30,6 +30,10 @@ router.post(
   projectController.createProject.bind(projectController),
 )
 
-router.delete('/:project', projectController.deleteProject.bind(projectController))
+router.delete(
+  '/:project',
+  (req, res, next) => jwtAuthMiddleware(req, res, next),
+  projectController.deleteProject.bind(projectController),
+)
 
 export default router
